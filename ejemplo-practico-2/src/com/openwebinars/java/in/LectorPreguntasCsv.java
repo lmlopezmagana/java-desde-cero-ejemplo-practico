@@ -11,7 +11,7 @@ import com.openwebinars.java.model.plantilla.PlantillaPregunta;
 import com.openwebinars.java.model.plantilla.PlantillaRespuesta;
 
 public class LectorPreguntasCsv implements LectorPreguntas {
-
+	
 	private String path;
 	private List<String> content;
 	private int preguntaActual;
@@ -28,6 +28,7 @@ public class LectorPreguntasCsv implements LectorPreguntas {
 	// de respuestas. La 0 es el texto de la pregunta, 
 	// y la 1 el nº de respuestas
 	private static final int OFFSET_COL_RESPUESTAS = 2;
+
 
 	/*
 	 * 
@@ -49,12 +50,9 @@ public class LectorPreguntasCsv implements LectorPreguntas {
 	public LectorPreguntasCsv(String path) throws IOException {
 		this(path, ";");
 	}
-	
-	
-	public String getPath() {
-		return this.path;
-	}
 
+
+	
 	@Override
 	public PlantillaPregunta leerSiguientePregunta() {
 		preguntaActual++;
@@ -64,10 +62,12 @@ public class LectorPreguntasCsv implements LectorPreguntas {
 		return null;
 	}
 
+
 	@Override
 	public boolean hayMasPreguntas() {
 		return preguntaActual < content.size();
 	}
+
 
 	@Override
 	public List<PlantillaPregunta> leerTodasPreguntas() {
@@ -79,6 +79,7 @@ public class LectorPreguntasCsv implements LectorPreguntas {
 		return result;
 	}
 
+	
 	private PlantillaPregunta procesarPregunta(String linea, int id) {
 		String[] datos = linea.split(separador);
 
@@ -116,5 +117,7 @@ public class LectorPreguntasCsv implements LectorPreguntas {
 
 		return result;
 	}
+
+
 
 }

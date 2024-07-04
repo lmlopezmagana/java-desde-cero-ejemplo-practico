@@ -8,7 +8,7 @@ import com.openwebinars.java.model.test.Test;
 
 public interface GeneradorTestsAleatorios {
 	
-		
+	
 	Test generarTest(int id, PlantillaTest plantilla, int cantidadPreguntas);
 	
 	default Test generarTest(PlantillaTest plantilla, int cantidadPreguntas) {

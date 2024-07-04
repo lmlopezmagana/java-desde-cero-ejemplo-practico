@@ -58,7 +58,6 @@ public class Test {
 	public List<Pregunta> getPreguntas() {
 		return Collections.unmodifiableList(preguntas);
 	}
-	
 
 	@Override
 	public int hashCode() {

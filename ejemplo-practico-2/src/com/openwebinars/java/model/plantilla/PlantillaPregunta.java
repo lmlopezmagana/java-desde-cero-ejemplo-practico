@@ -12,6 +12,7 @@ public class PlantillaPregunta {
 	private String texto;
 	private List<PlantillaRespuesta> respuestasCorrectas;
 	private List<PlantillaRespuesta> respuestasIncorrectas;
+
 	
 	public PlantillaPregunta() {
 		respuestasCorrectas = new ArrayList<>();
@@ -91,6 +92,7 @@ public class PlantillaPregunta {
 		return this.respuestasIncorrectas.remove(r);
 	}
 
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id, respuestasCorrectas, respuestasIncorrectas, texto);
@@ -112,9 +114,11 @@ public class PlantillaPregunta {
 
 	@Override
 	public String toString() {
-		return "Pregunta [id=" + id + ", texto=" + texto + ", respuestasCorrectas=" + respuestasCorrectas
+		return "PlantillaPregunta [id=" + id + ", texto=" + texto + ", respuestasCorrectas=" + respuestasCorrectas
 				+ ", respuestasIncorrectas=" + respuestasIncorrectas + "]";
 	}
+	
+	
 	
 	
 

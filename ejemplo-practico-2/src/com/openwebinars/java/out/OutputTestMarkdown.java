@@ -6,8 +6,7 @@ import java.util.stream.Collectors;
 
 import com.openwebinars.java.model.test.Test;
 
-public class OutputTestMarkdown extends AbstractOutputTestFile {
-	
+public class OutputTestMarkdown extends AbstractOutputTestFile{
 	
 	public OutputTestMarkdown(boolean sameFile) {
 		super(".md");
